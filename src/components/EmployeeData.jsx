@@ -1,24 +1,22 @@
 import React from "react";
 
-const EmployeeDir = (props) => {
+const EmployeeData = (props) => {
   return (
     <tr>
       <td>
         <img alt="userPhoto" src={props.picture}></img>
       </td>
       <td>
-        {props.first} {props.last}
+        {props.firstName} {props.lastName}
       </td>
       <td>
         {props.city}, {props.state}
       </td>
       <td>
-        Email: {props.email} 
-        Phone: {props.phone}
-        Cell: {props.cell}
+        {props.email} 
       </td>
     </tr>
   );
 };
 
-export default EmployeeDir;
+export default EmployeeData;

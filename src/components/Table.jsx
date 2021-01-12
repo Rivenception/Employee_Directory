@@ -1,5 +1,5 @@
 import React from "react";
-import EmployeeDir from "./EmployeeDir";
+import EmployeeData from "./EmployeeData";
 
 export function Table({children}) {
     return (
@@ -9,32 +9,12 @@ export function Table({children}) {
                     <th>Headshot</th>
                     <th>Name</th>
                     <th>Location</th>
-                    <th>Contact Info</th>
+                    <th>Email</th>
                 </tr>
             </thead>
-            {children}
-        </table>
-    );
-}
-
-
-export function TableBody({users}) {
-    return (
-        <tr>
             <tbody>
-                {users.map((employee) => (
-                    <EmployeeDir
-                        key={employee.picture.small}
-                        firstName={employee.name.first}
-                        lastName={employee.name.last}
-                        city={employee.location.city}
-                        state={employee.location.state}
-                        email={employee.email}
-                        phone={employee.phone}
-                        cell={employee.cell}
-                    />
-                ))}
+                {children}
             </tbody>
-        </tr>
+        </table>
     );
 }

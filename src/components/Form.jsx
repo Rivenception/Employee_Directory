@@ -21,7 +21,7 @@ function Form(props) {
               type="success"
               className="input-lg"
             >
-                Search
+                Filter
             </Button>
           </Col>
         </Row>
