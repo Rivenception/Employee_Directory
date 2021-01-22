@@ -4,24 +4,34 @@ import Input from "./Input";
 
 function Form(props) {
   return (
-    <form>
+    <form onSubmit={props.handleFormSubmit}>
       <Container>
+        <Col size="xs-3 sm-12">
+          <Input
+            name="stateFilter"
+            value={props.stateFilter}
+            onChange={props.handleInputChange}
+            placeholder="Filter by State"
+          />
+        </Col>
+        <br/>
         <Row>
-          <Col size="xs-9 sm-10">
-            <Input
-              name="userSearch"
-              value={props.userSearch}
-              onChange={props.handleInputChange}
-              placeholder="Search For a User"
-            />
-          </Col>
-          <Col size="xs-3 sm-2">
+          <Col size="xs-4 sm-6">
             <Button
               onClick={props.handleFormSubmit}
               type="success"
               className="input-lg"
             >
-                Filter
+              Filter By State
+            </Button>
+          </Col>
+          <Col size="xs-4 sm-6">
+            <Button
+              onClick={props.sortName}
+              type="success"
+              className="input-lg"
+            >
+              Sort By Name
             </Button>
           </Col>
         </Row>
